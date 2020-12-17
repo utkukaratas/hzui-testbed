@@ -6,6 +6,9 @@ import { Alert } from '@hazelcast/ui'
 import { Toast } from '@hazelcast/ui'
 
 function App() {
+  const [visible, setVisible] = React.useState(true)
+  const [visible2, setVisible2] = React.useState(true)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -14,9 +17,13 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
 
-        <Alert type="success" title="ersneirst" content="sietnrseitn" closeToast={() => console.log} />
+        {visible && <>
+          <Alert type="success" title="ersneirst" content="sietnrseitn" closeToast={() => setVisible(false)} />
+        </>}
 
-        <Toast type="info" content="Toast text" />
+        {visible2 && <>
+          <Toast type="info" content="Toast text" closeToast={() => setVisible2(false)} />
+        </>}
 
         <a
           className="App-link"
