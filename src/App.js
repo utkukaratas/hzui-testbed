@@ -1,5 +1,9 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+import { Alert } from '@hazelcast/ui'
+import { Toast } from '@hazelcast/ui'
 
 function App() {
   return (
@@ -9,6 +13,11 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+
+        <Alert type="success" title="ersneirst" content="sietnrseitn" closeToast={() => console.log} />
+
+        <Toast type="info" content="Toast text" />
+
         <a
           className="App-link"
           href="https://reactjs.org"
