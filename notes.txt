@@ -1,5 +1,8 @@
 # gotta run:
 
-utku@u460:~/dev/hz/frontend-shared/packages/ui$ npm link ../../../hzui-testbed/node_modules/react
+a) cd frontend-shared/node_modules/react && npm link
+b) cd frontend-shared/node_modules/react-dom && npm link
+c) cd testbed && npm link react
+d) cd testbed && npm link react-dom
 
 otherwise you have get 2 reacts conflicting.
